@@ -9,7 +9,7 @@ void printArray(int *array, int size)
     }
 }
 
-void bubbleSort(int *array, int size, int *pSwaps)
+void bubbleSort(int *array, int size)
 {
     int swaps = 0;
     int temp;
@@ -33,13 +33,10 @@ void bubbleSort(int *array, int size, int *pSwaps)
         swaps = 0;
 
     }
-
-    *pSwaps = swaps;
 }
 
 int main(void){
 
-    int* pSwaps;
     int array[] = {97, 16, 45, 63, 13, 22, 7, 58, 72};
     int size = sizeof(array) / sizeof(array[0]);
 
@@ -48,7 +45,7 @@ int main(void){
     printArray(array, size);
     printf("\n=========================================================\n\n");
 
-    bubbleSort(array, size, pSwaps);
+    bubbleSort(array, size);
 
     printf("\n=========================================================\n");
     printf("Sorted Array using Bubble Sort: ");
